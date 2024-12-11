@@ -14,10 +14,25 @@
     }
 
     body {
-      background: radial-gradient(circle, rgba(50, 50, 50, 1) 0%, rgba(20, 20, 20, 1) 100%);
+      background: radial-gradient(circle at center, rgba(20, 20, 50, 1) 0%, rgba(10, 10, 30, 1) 60%, rgba(0, 0, 20, 1) 100%);
       color: white;
       height: 100vh;
       overflow: hidden;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+    body::before {
+      content: '';
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      width: 150%;
+      height: 150%;
+      background: radial-gradient(circle, rgba(0, 255, 255, 0.2), transparent 60%);
+      filter: blur(100px);
+      transform: translate(-50%, -50%);
     }
 
     .top-corner {
@@ -31,9 +46,34 @@
       font-size: 1rem;
       text-shadow: 0 0 5px white;
     }
+
+    .glow-lines {
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      background: repeating-linear-gradient(
+        45deg,
+        transparent,
+        transparent 10px,
+        rgba(0, 255, 255, 0.1) 10px,
+        rgba(0, 255, 255, 0.1) 20px
+      );
+      opacity: 0.2;
+      animation: move-lines 5s linear infinite;
+    }
+
+    @keyframes move-lines {
+      from {
+        transform: translateY(0);
+      }
+      to {
+        transform: translateY(-100px);
+      }
+    }
   </style>
 </head>
 <body>
+  <div class="glow-lines"></div>
   <div class="top-corner">Website was made by Rez, for future projects</div>
 </body>
 </html>
