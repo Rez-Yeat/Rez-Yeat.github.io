@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Cool Dark UI</title>
+  <title>Rez Website</title>
   <style>
     /* General Reset */
     * {
@@ -14,79 +14,26 @@
     }
 
     body {
-      background: linear-gradient(135deg, #0f0f0f, #1a1a1a);
+      background: radial-gradient(circle, rgba(50, 50, 50, 1) 0%, rgba(20, 20, 20, 1) 100%);
       color: white;
-      display: flex;
-      justify-content: center;
-      align-items: center;
       height: 100vh;
       overflow: hidden;
     }
 
-    .container {
-      text-align: center;
-      padding: 20px;
-      border-radius: 15px;
-      background: rgba(20, 20, 20, 0.8);
-      box-shadow: 0 0 20px rgba(0, 255, 255, 0.4), 0 0 40px rgba(0, 255, 255, 0.2);
-    }
-
-    h1 {
-      font-size: 3rem;
-      margin-bottom: 20px;
-      text-shadow: 0 0 10px cyan, 0 0 20px cyan;
-    }
-
-    .btn {
-      display: inline-block;
-      margin: 10px;
-      padding: 15px 30px;
-      font-size: 1.2rem;
-      color: white;
-      border: 2px solid cyan;
-      border-radius: 10px;
-      background: transparent;
-      cursor: pointer;
-      text-shadow: 0 0 10px cyan;
-      transition: 0.3s;
-    }
-
-    .btn:hover {
-      background: cyan;
-      color: black;
-      box-shadow: 0 0 20px cyan, 0 0 40px cyan;
-    }
-
-    .btn:active {
-      transform: scale(0.95);
-    }
-
-    .neon-box {
-      margin-top: 20px;
-      padding: 20px;
-      border-radius: 10px;
-      border: 2px solid #ff007f;
-      background: linear-gradient(135deg, #1a1a1a, #2a2a2a);
-      box-shadow: 0 0 15px #ff007f, 0 0 30px rgba(255, 0, 127, 0.6);
-    }
-
-    .neon-box p {
-      font-size: 1.2rem;
-      text-shadow: 0 0 5px #ff007f, 0 0 10px #ff007f;
+    .top-corner {
+      position: absolute;
+      top: 10px;
+      left: 10px;
+      padding: 10px;
+      border-radius: 8px;
+      background: rgba(0, 0, 0, 0.7);
+      box-shadow: 0 0 10px rgba(255, 255, 255, 0.5), 0 0 20px rgba(255, 255, 255, 0.3);
+      font-size: 1rem;
+      text-shadow: 0 0 5px white;
     }
   </style>
 </head>
 <body>
-  <div class="container">
-    <h1>Welcome to My Cool Website</h1>
-    <div>
-      <button class="btn">Button 1</button>
-      <button class="btn">Button 2</button>
-      <button class="btn">Button 3</button>
-    </div>
-    <div class="neon-box">
-      <p>WAZAAAAAAAAAAAAAAAAAAAAAAAAA</p>
-    </div>
-  </div>
+  <div class="top-corner">Website was made by Rez, for future projects</div>
 </body>
 </html>
